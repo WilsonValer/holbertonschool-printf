@@ -17,7 +17,7 @@ typedef struct _structt
 {
 	char *spef;
 	int (*fun)(va_list);
-}_structt;
+} _structt;
 
 int _putchar(char c);
 int _printf(const char *format, ...);

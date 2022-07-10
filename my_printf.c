@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
-	if (format == NULL || !format[i+1])
+	if (format == NULL || !format[i + 1])
 		return (-1);
 	while (format[i])
 	{
@@ -44,14 +44,13 @@ int _printf(const char *format, ...)
 					i++;
 					break;
 				}
-				default :
+				default:
 				{
 					j += _putchar(format[i]);
 					j += _putchar(format[i + 1]);
 					i++;
 					break;
 				}
-				
 			}
 		}
 		else

@@ -8,7 +8,7 @@
 int (*get_func(const char *format))(va_list)
 {
 	int i;
-	_structt arr[] ={
+	_structt arr[] = {
 		{"c", print_char},
 		{"s", print_str},
 		{"%", print_pct},
