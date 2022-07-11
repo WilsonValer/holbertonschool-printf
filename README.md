@@ -1,5 +1,6 @@
-##Índice
-# holbertonschool-printf
+
+
+<h1 align="center"> holbertonschool-printf </h1>
 *[Título e imagen de portada](#Título-e-imagen-de-portada)
 
 *[Insignias](#insignias)
