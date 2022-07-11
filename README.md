@@ -6,7 +6,7 @@
 below. This function write its output to the stdout, the standard output stream. 
 Returns the count of printed characters when the function is successful and -1 when the function fails.
 
-## Ferramentas utilizadas
+## Herramentas utilizadas
 
 |<a href="https://www.edx.org/es/aprende/programacion-en-c" target="_blank"> <img src="https://disenowebakus.net/imagenes/articulos/lenguaje-de-programacion-c.jpg" alt="c" width="40" height="40"/> </a> | <a href="https://developer.android.com/studio" target="_blank"> <img src="https://i0.wp.com/colaboratorio.net/wp-content/uploads/2017/01/bash.jpg?fit=2000%2C1200&ssl=1" alt="androidStudio" width="40" height="40"/> </a> | <a href="https://firebase.google.com/?hl=pt" target="_blank"> <img src="https://www.redeszone.net/app/uploads-redeszone.net/2018/10/novedades-ubuntu.jpg?x=480&y=375&quality=40" alt="firebase" width="40" height="40"/> </a> |
 | :---: | :---: | :---: |
