@@ -25,7 +25,7 @@ if (str == NULL)
 str = "(null)";
 for (j = 0; str[j]; j++)
 _putchar(str[j]);
-return (j);
+return (j - 1);
 }
 /**
 *print_pct - print the percentage
