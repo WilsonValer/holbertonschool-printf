@@ -1,24 +1,32 @@
 #include "main.h"
 
 /**
-**get_func - check the code
-*@format: variable
+*compare_specifier - check the code
+*@s: variable
 *Return: Always 0.
 */
-int (*get_func(const char *format))(va_list)
+funtion_print compare_specifier(char s)
 {
-	int i;
-	_structt arr[] = {
-		{"c", print_char},
-		{"s", print_str},
-		{"%", print_pct},
-		{NULL, NULL}};
-	for (i = 0; arr[i].spef; i++)
-	{
-		if (*format == *(arr[i].spef))
-		{
-			return (arr[i].fun);
-		}
-	}
-	return (NULL);
+int i = 0;
+
+funtion_print p = {0, NULL};
+
+_structt arr[] = {
+{'c', print_char},
+{'d', print_num},
+{'i', print_int},
+{'s', print_str},
+{'%', print_pct},
+{'\0', NULL}};
+while (arr[i].spef)
+{
+if (arr[i].spef == s)
+{
+p.indicator = 1;
+p.play = arr[i].fun;
+return (p);
+}
+i++;
+}
+return (p);
 }
