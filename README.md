@@ -23,25 +23,19 @@ Format generators are a format with which we tell the function to take the argum
 ## Betty coding style:
 All files are written in C and follows the Betty coding style for Holberton School. For more detail, check this page:
 
-*[Insignias](#insignias)
+<a href="https://github.com/holbertonschool/Betty/wiki">Betty style documentation</a>
 
-*[Índice](#índice)
+## Function prototypes.
+All function prototypes used to compile _printf() are included in the header file main.h
 
-*[Descripción del proyecto](#descripción-del-proyecto)
++int _putchar(char c);
++int _printf(const char *format, ...);
++untion_print compare_specifier(char s);
++int print_char(va_list args);
++int print_str(va_list args);
++int print_pct(va_list args);
 
-*[Estado del proyecto](#Estado-del-proyecto)
 
-*[Características de la aplicación y demostración](#Características-de-la-aplicación-y-demostración)
-
-*[Acceso al proyecto](#acceso-proyecto)
-
-*[Tecnologías utilizadas](#tecnologías-utilizadas)
-
-*[Personas Contribuyentes](#personas-contribuyentes)
-
-*[Personas-Desarrolladores del Proyecto](#personas-desarrolladores)
-
-* [Licencia](#licencia)
 
 *[Conclusión](#conclusión)
 
