@@ -8,58 +8,39 @@
 */
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int j = 0;
-	int (*fun)(va_list);
+int i = 0, lent = 0, r = 0;
 
-	va_list args;
+funtion_print g = {0, NULL};
+va_list args;
 
-	va_start(args, format);
-	if (format == NULL || !format[i + 1])
-		return (-1);
-	while (format[i])
-	{
-		if (format[i] == '%')
-		{
-			switch (format[i + 1])
-			{
-				case 'c':
-				{
-					fun = get_func(&format[i + 1]);
-					j += fun(args);
-					i++;
-					break;
-				}
-				case 's':
-				{
-					fun = get_func(&format[i + 1]);
-					j += fun(args);
-					i++;
-					break;
-				}
-				case '%':
-				{
-					fun = get_func(&format[i + 1]);
-					j += fun(args);
-					i++;
-					break;
-				}
-				default:
-				{
-					j += _putchar(format[i]);
-					j += _putchar(format[i + 1]);
-					i++;
-					break;
-				}
-			}
-		}
-		else
-		{
-			_putchar(format[i]);
-			j++;
-		}
-		i++;
-	}
-	va_end(args);
-	return (j);
+if (!format || (format[0] == '%' && format[1] == '\0'))
+return (-1);
+if (format[0] == '\0')
+return (0);
+va_start(args, format);
+
+while (format[i] != '\0')
+{
+if (format[i] == '%')
+{
+g = compare_specifier(format[i + 1]);
+if (g.indicator == 1)
+{
+r = g.play(args);
+lent += r + 1;
+i += 2;
+continue;
+}
+_putchar('%');
+lent++;
+}
+else
+{
+_putchar(format[i]);
+lent++;
+}
+i++;
+}
+va_end(args);
+return (lent);
 }
