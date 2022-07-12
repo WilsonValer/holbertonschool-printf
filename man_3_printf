@@ -1,0 +1,90 @@
+.\" Manpage for nuseradd.
+.\" Contact vivek@nixcraft.net.in to correct errors or typos.
+.TH man 8 "11 Jul 2022" "1.0" "_PRINTF'S MANUAL"
+.SH NAME
+holbertonschool-printf
+.SH SYNOPSIS
+#include <stdio.h>
+.br
+#include <stdarg.h>
+.br
+#include <unistd.h>
+.br
+#include <string.h>
+.br
+#include <unistd.h>
+
+.SH FORMAT OF THE FORMAT STRING
+Format - is a character string.
+.TP
+The format string is composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more sub sequent arguments.
+
+.SH DESCRIPTION
+The function
+.B printf()
+produces output according to a format given. Returns the
+number of characters printed (excluding the null byte used to end output to
+strings). The function
+.B _printf()
+write output to stdout, the standard output stream.
+.SS Format
+.B format
+is a character string. The
+.B format
+string is composed of zero
+or more directives. Conversion specifications are introduced by the character
+.B %
+, and ends with a conversion specifier.
+.SS The conversion specifier
+It´s a character that specifies the type of conversion to be applied. The
+conversion specifiers and their meanings.
+.IP \[bu] 2
+d, i:
+An
+.I int
+argument is converted to signed decimal notation.
+.IP \[bu] 2
+c:
+A single character
+.IP \[bu] 2
+s:
+A string. The
+.I "const char\ *"
+argument is expected to be a pointer to an array of character type (pointer
+to a string). The string should end with a terminating null byte (\'\\0\').
+.IP \[bu] 2
+%:
+A '%' is written.  No argument is converted.  The complete conversion
+specification is '%%'.
+.SH RETURN VALUES
+The number of characters printed (excluding tha null byte used to end output to strings). Write output to stdout, the standart output stream.
+
+.SH ATTRIBUTES
+.br
+.TS
+allbox expand ;
+c c c.
+Interface 	Attribute	Value
+_putchar, write()	Thread safety	MT-Safe locale
+.TE
+.SH SEE ALSO
+.br
+printf(1), asprintf(3), puts(3), scanf(3)
+
+.SH BUGS
+we found any difference between loop for and while, because the while count his
+iterator finishing the function , but the loop for finish the iterator at the begin. this was compliacate for us becouse the length of the string was difference.
+.SH EXAMPLES
+to print a string 
+.br
+#include <math.h>
+.br
+#include <stdio.h>
+.br
+_printf("String:[%s]\n", "I am a string !");
+.br
+output = String:[I am a string !]
+.SH AUTHORS
+Wilson Valer - 5168@holbertonschool.com
+.br
+Aaron JAuregui - 5169@holbertonschool.com
